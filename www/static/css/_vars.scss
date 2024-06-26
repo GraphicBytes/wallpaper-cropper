@@ -1,0 +1,33 @@
+$black : #000;
+$blue : #477ad3;
+
+$bgcolourfaded : rgba(238, 238, 238, 1);
+
+$static : "https://wallpapercropper.com";
+
+$font : 'Mukta Mahee', Arial, Helvetica, sans-serif;
+
+
+@mixin radius($val) { border-radius:$val;}
+@mixin boxshadow-huge($val) { box-shadow: 0px 0px 65px 0px rgba(0,0,0,$val);}
+@mixin boxshadow-huge-inset($val) { box-shadow:inset 0px 0px 65px 0px rgba(0,0,0,$val);}
+@mixin boxshadow-small($val) { box-shadow: 0px 0px 10px 0px rgba(0,0,0,$val);}
+
+@mixin ani($val) {transition: all $val cubic-bezier(0.19, 1, 0.22, 1);}
+
+$whitetransparent : rgba(255,255,255,0);
+$white : rgba(255,255,255,1);
+$black : rgba(0,0,0,1);
+$whitefaded : rgba(255,255,255,0.85);
+$blackfaded : rgba(0,0,0,0.9);
+$bluefaded : rgba(58, 123, 213, 0.9);
+$bgcolour : #eeeeee;
+$grey : #e2e2e2;
+$darkergrey : #d4d4d4;
+
+$red : #f00;
+
+$green : #88db1c;
+
+$lightblue : #5a92ef;
+$lightbluefaded : rgba(90, 146, 239, 0.85);

@@ -1,0 +1,2 @@
+RewriteEngine On
+    RewriteRule ^([^-]*)-([^-]*)-([^-]*)\.jpg$ /var/www/html/view/view.php?downloadkey=$1&id=$2&resolution=$3 [L]

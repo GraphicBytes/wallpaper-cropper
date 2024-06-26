@@ -1,0 +1,213 @@
+@import "_vars";
+
+#fullscreen-b {
+  width: 100%;
+  min-height: calc(100% - 50px);
+  display: block;
+  overflow: hidden;
+  padding: 50px 0 0 0;
+  margin: 0;
+  background: $bgcolour;
+}
+
+.full-site-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  margin: 0 auto;
+  overflow: visible;
+  position: relative;
+
+  @media all and (max-width: 1000px) {
+    padding: 20px 0 60px 0;
+    width: 96%;
+    flex-wrap: wrap;
+  }
+  @media all and (min-width: 1000px) {
+    padding: 20px 0 60px 0;
+    width: 90%;
+    max-width: 1400px;
+    flex-wrap: wrap;
+  }
+}
+
+.left-column {
+  @media all and (max-width: 1000px) {
+    width: 100%;
+  }
+  @media all and (min-width: 1000px) {
+    width: 336px;
+  }
+}
+
+.left-column2 {
+  @media all and (max-width: 1000px) {
+    width: 100%;
+  }
+  @media all and (min-width: 1000px) {
+    width: 266px;
+  }
+}
+
+.fullscreen-container {
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
+}
+
+@media all and (max-width: 1000px) {
+  .fullscreen-container {
+    width: calc(100% - 40px);
+    padding: 20px;
+    position: relative;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .fullscreen-container {
+    padding: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+.errormessage {
+  width: 90%;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 16pt;
+  text-align: center;
+  color: $red;
+}
+
+.small-container {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  display: block;
+  overflow: hidden;
+}
+
+@media all and (max-width: 1000px) {
+  .small-container {
+    width: 80%;
+    position: relative;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .small-container {
+    min-width: 350px;
+    width: 20%;
+  }
+}
+
+.wallpaper-thumb-container-index {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  background: $whitefaded;
+
+  .wall-box-index {
+    position: relative;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    @include ani(100ms);
+
+    @media all and (max-width: 400px) {
+      width: 100%;
+    }
+    @media all and (min-width: 400px) and (max-width: 750px) {
+      width: 50%;
+    }
+    @media all and (min-width: 750px) and (max-width: 1000px) {
+      width: 33.33%;
+    }
+    @media all and (min-width: 1000px) {
+      width: 25%;
+    }
+
+    .wall-box-inner-index {
+      width: calc(100% - 20px);
+      overflow: hidden;
+      margin: 0 auto 20px auto;
+
+      .wall-box-image-index {
+        position: relative;
+        display: block;
+        width: calc(100% - 4px);
+        border: 2px solid $black;
+        @include ani(1000ms);
+      }
+      .wall-box-image-index:hover {
+        border: 2px solid $blue;
+      }
+    }
+  }
+
+  .cat-link {
+    display: block;
+    text-align: center;
+    font-size: 14pt;
+    text-decoration: none;
+    color: $black;
+    padding: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
+    @include radius(10px);
+    border: 1px solid $black;
+    @include ani(1000ms);
+    background: $whitetransparent;
+
+    small {
+      font-size: 9pt;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: -10px 0 0 0;
+    }
+
+    @media all and (max-width: 750px) {
+      width: calc(100% - 2px);
+    }
+    @media all and (min-width: 750px) and (max-width: 1000px) {
+      width: calc(50% - 12px);
+    }
+    @media all and (min-width: 1000px) {
+      width: calc(33.33% - 12px);
+    }
+  }
+
+  .cat-link:hover {
+    background: $grey;
+  }
+}
+
+.walllink {
+  position: relative;
+  display: block;
+}
+.walltitle {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 500;
+  color: $white;
+  padding: 5px 10px;
+  margin: 0 2px 2px 0;
+  white-space: nowrap;
+  font-size: 10pt;
+  text-decoration: none;
+  background: $bluefaded;
+  line-height: 100%;
+}
+
+.small-container.larger {
+  width: 70% !important;
+}

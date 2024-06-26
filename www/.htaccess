@@ -1,0 +1,6 @@
+RewriteEngine On
+	RewriteRule ^([^/]*)/$ /?page=$1 [L] [OR]
+	RewriteRule ^([^/]*)/([^/]*)/$ /?page=$1&typea=$2 [L] [OR]
+	RewriteRule ^([^/]*)/([^/]*)/([^/]*)/$ /?page=$1&typea=$2&typeb=$3 [L] [OR]
+	RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/$ /?page=$1&typea=$2&typeb=$3&typec=$4 [L] [OR]
+	RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/$ /?page=$1&typea=$2&typeb=$3&typec=$4&typed=$5 [L]

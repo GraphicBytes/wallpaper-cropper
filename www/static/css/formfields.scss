@@ -1,0 +1,147 @@
+@import "_vars";
+
+.preview {
+  display: block;
+  border: 1px solid #f3efe0;
+  width: calc(80% - 5px);
+  margin: 0 auto 20px auto;
+}
+.preview.warning {
+  border: 5px solid #f00;
+}
+
+.preview2 {
+  display: block;
+  width: calc(80% - 5px);
+  border: 1px solid #f3efe0;
+  margin: 0 auto 20px auto;
+}
+.preview2.warning {
+  border: 5px solid #f00;
+}
+
+.form-field {
+  width: calc(100% - 12px);
+  border: 1px solid $black;
+  background: transparent;
+  font-size: 9pt;
+  height: 15px;
+  line-height: 15px;
+  padding: 5px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.form-field-blue {
+  width: calc(100% - 12px);
+  border: 1px solid $blue;
+  background: transparent;
+  font-size: 9pt;
+  height: 15px;
+  line-height: 15px;
+  padding: 5px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.form-textfield {
+  width: calc(100% - 12px);
+  border: 1px solid $black;
+  background: transparent;
+  font-size: 9pt;
+  height: 85px;
+  line-height: 15px;
+  padding: 5px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.form-field2 {
+  width: calc(100% - 12px);
+  border: 1px solid $black;
+  background: transparent;
+  font-size: 9pt;
+  height: 15px;
+  line-height: 15px;
+  padding: 5px;
+  margin: 0 auto 15px auto;
+}
+
+.submit {
+  @include ani(500ms);
+  display: block;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  width: 100%;
+  font-size: 12px;
+  height: 35px;
+  line-height: 25px;
+  padding: 5px;
+  margin: 0 auto 0 auto;
+  color: $white;
+  background: $blue;
+  font-weight: bold;
+}
+.submit:hover {
+  font-size: 16px;
+}
+
+.submit2 {
+  @include ani(200ms);
+  border: none;
+  width: 65%;
+  font-size: 12px;
+  height: 35px;
+  line-height: 25px;
+  padding: 5px;
+  margin: 0 auto 0 auto;
+  color: $white;
+  background: $blue;
+  font-weight: bold;
+  float: right;
+}
+.submit2:hover {
+  font-size: 16px;
+}
+
+.submit3 {
+  @include ani(500ms);
+  border: none;
+  width: 100%;
+  font-size: 12px;
+  height: 35px;
+  line-height: 25px;
+  padding: 5px;
+  margin: 0 auto 30px auto;
+  color: $white;
+  background: $blue;
+  font-weight: bold;
+}
+.submit3:hover {
+  font-size: 16px;
+}
+
+.styled-select {
+  background: url("#{$static}/static/images/15xvbd5.png") no-repeat calc(100% - 10px) 0;
+  height: 29px;
+  overflow: hidden;
+  width: 100%;
+  appearance: none;
+  font-size: 14px;
+  height: 29px;
+  line-height: 29px;
+  border: none;
+  padding: 0 5px;
+}
+
+.semi-square {
+  border: none;
+}
+
+.blue {
+  background-color: $blue;
+}
+.blue {
+  color: #fff;
+}

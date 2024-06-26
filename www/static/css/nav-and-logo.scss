@@ -1,0 +1,259 @@
+@import "_vars";
+
+
+// #{$static}
+
+
+
+#mobile-menu {
+  /* narrow */
+  @media all and (max-width: 1200px) {
+    display:none;
+  }
+  /* wide */
+  @media all and (min-width: 1200px) {
+    display:none!important;
+  }
+    overflow-y: scroll;
+    width:100%; height:calc(100% - 50px);
+    padding:0; margin:0;
+    position:fixed; top:50px; left:0;
+    background: $bgcolour;
+    z-index: 9000;
+
+    #inner-mobile-menu {
+      display:flex;
+      flex-wrap:wrap; justify-content: center; align-items: flex-start;
+      width:100%; min-height:100%;
+      padding:0 0 0 0; margin:0 0 0 0;
+
+          .mobile-link{
+            display:block;
+            width:100%;
+            padding:0;
+            margin:0 0 0 0;
+            @include radius(15px);
+
+              h2{
+                width:100%;
+                display: block;
+                background:$blue;
+                padding:0; margin:0;
+                font-size:10pt;
+                line-height: 300%;
+                text-align: center;
+                color: $white;
+              }
+              a {
+                width:100%;
+                color:$black;
+                text-decoration: none;
+                text-align: center;
+                line-height: 300%;
+                font-size: 10pt;
+                display:block;
+                padding:0;
+                border-bottom:1px solid $darkergrey;
+              }
+              a:hover {
+                color:$white;
+                background:$blue;
+              }
+          }
+
+
+    }
+}
+
+#mainmenu {
+  display:block;
+  width:100%; height:50px;
+  position:fixed; top:0; left:0; z-index:100000;
+  background:$bgcolour;
+
+      #innernav{
+        display:flex; justify-content:space-between; align-items: flex-start;
+        margin:0 auto;
+        overflow:visible;
+        position:relative;
+        padding:0;
+        height:50px;
+        @media all and (max-width: 1000px) {
+          width:96%;
+        }
+        @media all and (min-width: 1000px) {
+          width:90%; max-width:1400px;
+        }
+
+      }
+
+        .desktop {
+              justify-content: flex-end; align-items: flex-end;
+              height:50px;
+              padding:0; margin:0;
+              border-right:1px solid $darkergrey;
+
+            @media all and (max-width: 1000px) {
+              display:none;
+            }
+            @media all and (min-width: 1000px) {
+              display:flex;
+            }
+
+                a {
+                    font-size:10pt;
+                    font-weight: bold;
+                    text-decoration:none;
+                    color:$black;
+                    display:block;
+                    margin:0 0 0 0;
+                    padding:0 12px 0 12px;
+                    height:50px;
+                    line-height:50px;
+                    @include ani(700ms);
+                    white-space: nowrap;
+                    border-left:1px solid $darkergrey;
+                }
+                a:hover {
+                  background:$blue;
+                  color:$white;
+                }
+
+        }
+
+
+}
+
+
+ul.infomenu {
+  list-style: none;
+  background: none;
+  padding:0; margin:0;
+  position:relative;
+  border-left:1px solid $darkergrey;
+  @include ani(500ms);
+}
+ul.infomenu ul {
+  list-style: none;
+  padding:0;
+  margin:0;
+  background:$bgcolour;
+  display:block;
+  visibility: hidden;
+  position: absolute;
+  right:0;
+  top:80px;
+  @include ani(250ms);
+  opacity: 0;
+}
+
+ul.infomenu ul li a {
+  font-weight: normal!important;;
+  border-left:none!important;
+  padding:0 50px 0 20px!important;
+  margin:0 0 0 0!important;
+  border-top:1px solid $darkergrey;
+}
+
+ul.infomenu .infoicon{
+  display:block;
+  width:40px; height:40px;
+  padding:5px;
+  margin:0;
+  overflow:hidden;
+  background-image:url('#{$static}/static/images/info_icon.png');
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+
+ul.infomenu:hover {
+  background:$blue;
+}
+
+ul.infomenu:hover .infoicon{
+background-image:url('#{$static}/static/images/info_icon_h.png');
+}
+
+ul.infomenu:hover ul {visibility: visible; opacity: 1;  top:50px;}
+
+
+
+.home-icon{
+  display:block;
+  width:40px; height:40px;
+  padding:5px;
+  margin:0;
+  overflow:hidden;
+  background:$bgcolour url('#{$static}/static/images/home-icon.png');
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.home-icon:hover{
+  display:block;
+  width:40px; height:40px;
+  padding:5px;
+  margin:0;
+  overflow:hidden;
+  background:$blue url('#{$static}/static/images/home-icon_h.png')!important;
+  background-size: 25px!important;
+  background-repeat: no-repeat!important;
+  background-position: 50% 50%!important;
+}
+
+
+ul.infomenu .profile-icon{
+  width:50px;
+  height:50px!important;
+  padding:0!important;
+  margin:0!important;
+  border-left:none!important;
+  overflow: hidden;
+  position: relative;
+}
+
+.notification-dot {
+  display:block;
+  overflow:hidden;
+  width:10px; height:10px;
+  background:#f00;
+  border-radius: 5px;
+  position: absolute;
+  top:5px; right:5px;
+  animation:flash 1s infinite;
+  animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+.logo {
+  width:141px; height:40px;
+  display:block;
+  background: url('#{$static}/static/images/logo_black_small.png'); background-size: contain; background-position: 0 50%; background-repeat: no-repeat;
+  padding:0; margin:5px 0;
+  @include ani(1000ms);
+  z-index:9000;
+}
+
+
+
+
+// #{$static}
+
+// @mixin radius($val) { border-radius:$val;}
+// @mixin boxshadow-huge($val) { box-shadow: 0px 0px 65px 0px rgba(0,0,0,$val);}
+// @mixin boxshadow-huge-inset($val) { box-shadow:inset 0px 0px 65px 0px rgba(0,0,0,$val);}
+// @mixin boxshadow-small($val) { box-shadow: 0px 0px 10px 0px rgba(0,0,0,$val);}
+
+// @mixin ani($val) {transition: all $val cubic-bezier(0.19, 1, 0.22, 1);}
+
+// $whitetransparent : rgba(255,255,255,0);
+// $white : rgba(255,255,255,1);
+// $black : rgba(0,0,0,1);
+// $whitefaded : rgba(255,255,255,0.85);
+// $blackfaded : rgba(0,0,0,0.9);
+// $bluefaded : rgba(58, 123, 213, 0.9);
+// $bgcolour : #eeeeee;
+// $grey : #e2e2e2;
+// $darkergrey : #d4d4d4;

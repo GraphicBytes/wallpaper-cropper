@@ -1,0 +1,68 @@
+@import "_vars";
+
+h1.underlinetitle {
+  width: 100%;
+  display: block;
+  font-size: 14pt;
+  text-align: center;
+  margin: 40px 0 0 0;
+  padding: 0;
+}
+
+h5.code-title {
+  width: 100%;
+  display: block;
+  font-size: 14pt;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+h6.code-title {
+  width: 100%;
+  display: block;
+  font-size: 11pt;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+.bbcode-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .code-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media all and (max-width: 1000px) {
+      width: 100%;
+    }
+    @media all and (min-width: 1000px) {
+      width: calc(48% - 10px);
+    }
+  }
+}
+.codebox {
+  width: calc(100% - 20px);
+  display: block;
+  padding: 10px;
+  background: none;
+  border: 1px solid black;
+}
+
+.sub-codes {
+  display: block;
+
+  @media all and (max-width: 1000px) {
+    width: 100%;
+  }
+  @media all and (min-width: 1000px) {
+    width: calc(50% - 10px);
+  }
+}

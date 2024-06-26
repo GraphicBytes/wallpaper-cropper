@@ -1,0 +1,477 @@
+@import "_vars";
+
+.review-left {
+  display: block;
+  @media all and (max-width: 600px) {
+    width: 100%;
+  }
+  @media all and (min-width: 600px) {
+    width: 280px;
+    float: left;
+  }
+}
+
+.review-left-inner {
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  h4 {
+    border-bottom: none;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 0;
+    font-size: 10pt;
+    border-bottom: 1px solid $blue;
+  }
+  @media all and (max-width: 600px) {
+    margin: 0 auto 20px auto;
+  }
+  @media all and (min-width: 600px) {
+    margin: 0 0 20px 10px;
+  }
+}
+
+.thumb-block {
+  width: 135px;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+.review-thumb {
+  display: block;
+  width: 133px;
+  border: 1px solid $blue;
+  margin: 0 0 5px 0;
+}
+.thumb-block h3 {
+  border-bottom: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.review-right {
+  width: calc(100% - 350px);
+  display: block;
+  margin: 0 10px 0 0;
+  float: right;
+  display: block;
+  margin: 0 10px 0 0;
+
+  @media all and (max-width: 600px) {
+    width: 100%;
+  }
+  @media all and (min-width: 600px) {
+    width: calc(100% - 350px);
+  }
+  float: right;
+}
+
+.updated-text {
+  background: #88db1c;
+  opacity: 0;
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  margin: 0 0 0 0;
+  border: none;
+  animation-name: updatetextfade;
+  animation-duration: 6s;
+}
+
+.wallimage {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.checknotification {
+  animation: flash 1s infinite;
+  animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.updated-text {
+  background: $green;
+  opacity: 0;
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  -webkit-animation-name: updatetextfade;
+  animation-name: updatetextfade;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+}
+
+.checknotification {
+  -webkit-animation: flash 1s infinite;
+  animation: flash 1s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.newphotoform {
+  width: calc(100% - 30px);
+  margin: 15px auto;
+  display: block;
+}
+
+.narrow-container {
+  display: block;
+  width: 60%;
+  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+  background: $whitefaded;
+
+  h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 28pt;
+    font-family: $font;
+    padding: 0 0 0 0;
+    margin: 0 0 10px 0;
+    line-height: 100%;
+  }
+
+  h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 14pt;
+    font-family: $font;
+    padding: 0 0 0 0;
+    margin: 0 0 10px 0;
+    line-height: 100%;
+  }
+
+  h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 10pt;
+    font-family: $font;
+    padding: 0 0 0 0;
+    margin: 0 0 10px 0;
+    line-height: 100%;
+  }
+
+  h5 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 11pt;
+    font-family: $font;
+    padding: 0 0 0 0;
+    margin: -5px 0 0 0;
+    line-height: 100%;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 11pt;
+    font-family: $font;
+    padding: 0 0 0 0;
+    margin: 0 0 2px 0;
+  }
+
+  @media all and (max-width: 1000px) {
+    width: 90%;
+  }
+  @media all and (min-width: 1000px) {
+    width: 65%;
+  }
+}
+
+.tutorial {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 60%;
+  padding: 20px;
+  margin: 0 auto;
+
+  h1 {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 16pt;
+    line-height: 100%;
+    font-weight: normal;
+  }
+
+  h2 {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 12pt;
+    line-height: 100%;
+    font-weight: normal;
+  }
+
+  h3 {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 14pt;
+    line-height: 100%;
+    font-weight: normal;
+  }
+
+  p {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 12pt;
+    line-height: 100%;
+    font-weight: normal;
+  }
+
+  @media all and (max-width: 1000px) {
+    width: 100%;
+  }
+  @media all and (min-width: 1000px) {
+    width: 75%;
+  }
+}
+
+.notificationspacer {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-block {
+  width: 100%;
+  display: block;
+  margin: 0 0 15px 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.notification-bar {
+  width: calc(100% - 22px);
+  padding: 10px;
+  display: flex;
+  min-height: 30px;
+  background: $bgcolour;
+  border: 1px solid $black;
+  cursor: pointer;
+  @include ani(500ms);
+}
+.unread .notification-bar {
+  background: $blue !important;
+  border: 1px solid $blue;
+}
+
+.notification-bar.unread {
+  background: $black;
+  color: $white;
+}
+.notification-bar:hover {
+  background: $blue;
+  border: 1px solid $blue;
+}
+
+h1.notification-header {
+  display: block;
+  width: 70%;
+  font-size: 12pt;
+  line-height: 30px;
+  color: $black;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+h2.notification-date {
+  display: block;
+  width: 30%;
+  font-size: 11pt;
+  line-height: 30px;
+  color: $black;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+.notification-message p {
+  display: block;
+  width: 100%;
+  font-size: 10pt;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.notification-message img {
+  display: block;
+  padding: 0;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+.notification-bar:hover h1.notification-header {
+  color: $white;
+}
+.notification-bar:hover h2.notification-date {
+  color: $white;
+}
+
+.unread .notification-bar h1.notification-header {
+  color: $white;
+}
+.unread .notification-bar h2.notification-date {
+  color: $white;
+}
+
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  display: none;
+}
+
+.slider {
+  width: 60px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $darkergrey;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $blue;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $black;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.settings-row {
+  width: 90%;
+  margin: 15px auto 15px auto;
+  padding: 0;
+  display: flex;
+  min-height: 34px;
+}
+
+.settings-left {
+  display: block;
+  width: 65%;
+  font-size: 10pt;
+  color: $blue;
+  text-align: left;
+}
+
+.settings-right {
+  display: block;
+  width: 30%;
+  font-size: 12pt;
+  color: $blue;
+  text-align: right;
+  padding: 0 0 0 10px;
+}
+
+.settings-right select {
+  appearance: none;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  line-height: 29px;
+  padding: 0 10px; /* If you add too much padding here, the options won't show in IE */
+  width: 100%;
+}
+
+.delete-button {
+  display: block;
+  width: 100%;
+  font-size: 10px;
+  padding: 5px;
+  margin: 0 auto 25px auto;
+  color: #fff;
+  background: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  @include ani(500ms);
+}
+.delete-button2 {
+  display: block;
+  width: 100%;
+  font-size: 10px;
+  padding: 5px 0;
+  margin: 50px auto 25px auto;
+  color: #fff;
+  background: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  @include ani(500ms);
+}
+.delete-button:hover,
+.delete-button2:hover {
+  background: $blue;
+}
+
+.thetagsspacer {
+  display: block;
+  height: 5;
+  padding: 0;
+  margin: 0;
+}
+
+.delete-collection {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: url("#{$static}/static/images/delete.png") no-repeat 50% 50%;
+}

@@ -1,0 +1,11 @@
+@import "_vars";
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes mobilefadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
